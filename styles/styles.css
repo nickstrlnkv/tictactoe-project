@@ -1,0 +1,21 @@
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameboard {
+    height: 500px;
+    width: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.gameboard-image {
+    height: 100%;
+    width: 100%;
+}
