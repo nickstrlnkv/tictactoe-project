@@ -1,5 +1,6 @@
 (function() {
 
+    let pWonText = document.querySelector(".wrapper--text");
     function gameBoard() {
         const divGameBoard = document.querySelector(".gameboard");
         console.log(divGameBoard);
@@ -10,39 +11,60 @@
         // Check 1-3 rows
         if ((array[0][0] == "X" && array[0][1] == "X" && array[0][2] == "X")
         || (array[0][0] == "O" && array[0][1] == "O" && array[0][2] == "O")) {
+
+            pWonText.textContent = `Player ${array[0][0]} is won the game!`;
+
             return `Player ${array[0][0]} is won the game!`;
         }
         else if ((array[1][0] == "X" && array[1][1] == "X" && array[1][2] == "X")
         || (array[1][0] == "O" && array[1][1] == "O" && array[1][2] == "O")) {
-            return `Player ${array[0][0]} is won the game!`;
+
+            pWonText.textContent = `Player ${array[1][0]} is won the game!`;
+
+            return `Player ${array[1][0]} is won the game!`;
         }
         else if ((array[2][0] == "X" && array[2][1] == "X" && array[2][2] == "X")
         || (array[2][0] == "O" && array[2][1] == "O" && array[2][2] == "O")) {
-            return `Player ${array[0][0]} is won the game!`;
+
+            pWonText.textContent = `Player ${array[2][0]} is won the game!`;
+            return `Player ${array[2][0]} is won the game!`;
         }
     
         // Check 1-3 columns
         if ((array[0][0] == "X" && array[1][0] == "X" && array[2][0] == "X")
         || (array[0][0] == "O" && array[1][0] == "O" && array[2][0] == "O")) {
+
+            pWonText.textContent = `Player ${array[0][0]} is won the game!`;
             return `Player ${array[0][0]} is won the game!`;
         }
         else if ((array[0][1] == "X" && array[1][1] == "X" && array[2][2] == "X")
         || (array[0][1] == "O" && array[1][1] == "O" && array[2][1] == "O")) {
-            return `Player ${array[0][0]} is won the game!`;
+            
+            pWonText.textContent = `Player ${array[0][1]} is won the game!`;
+
+            return `Player ${array[0][1]} is won the game!`;
         }
         else if ((array[0][2] == "X" && array[1][2] == "X" && array[2][2] == "X")
         || (array[0][2] == "O" && array[1][2] == "O" && array[2][2] == "O")) {
-            return `Player ${array[0][0]} is won the game!`;
+
+            pWonText.textContent = `Player ${array[0][2]} is won the game!`;
+
+            return `Player ${array[0][2]} is won the game!`;
         }
     
         // Check diagonals
         if ((array[0][0] == "X" && array[1][1] == "X" && array[2][2] == "X")
         || (array[0][0] == "O" && array[1][1] == "O" && array[2][2] == "O")) {
+
+            pWonText.textContent = `Player ${array[0][0]} is won the game!`;
+
             return `Player ${array[0][0]} is won the game!`;
         }
         else if ((array[0][2] == "X" && array[1][1] == "X" && array[2][0] == "X")
         || (array[0][2] == "O" && array[1][1] == "O" && array[2][0] == "O")) {
-            return `Player ${array[0][0]} is won the game!`;
+
+            pWonText.textContent = `Player ${array[0][2]} is won the game!`;
+            return `Player ${array[0][2]} is won the game!`;
         }
     }
     
